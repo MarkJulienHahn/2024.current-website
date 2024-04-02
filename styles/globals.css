@@ -44,10 +44,15 @@ a {
 
 :root {
   --green: #005800;
-  --red: red;
+  --red: #ff3d00;
   --pink: #ffa0ff;
-  --blue: blue;
+  --blue: #00beff;
   --grey: #f2f2f2;
+  /* --green: blue;
+  --red: green;
+  --pink: black;
+  --blue: yellow;
+  --grey: #f2f2f2; */
   --space: 65px;
   --spaceLarge: 130px;
   --spaceMedium: 48px;
@@ -142,14 +147,12 @@ input {
   left: 0 !important;
 }
 
-
 @media screen and (max-width: 1500px) {
   body {
     font-size: 14pt;
     line-height: 16pt;
   }
 }
-
 
 @media screen and (max-width: 1200px) {
   :root {
@@ -184,5 +187,4 @@ input {
     height: 200px;
     pointer-events: none;
   }
-
 }

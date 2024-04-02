@@ -82,9 +82,9 @@ const CurrentlyPreview = ({ currently, english }) => {
   };
 
   useEffect(() => {
-    convertDate1(firstPost.header.date);
-    convertDate2(firstNews.header.date);
-    convertDate3(secondPost.header.date);
+    convertDate1(firstPost?.header.date);
+    convertDate2(firstNews?.header.date);
+    convertDate3(secondPost?.header.date);
   }, [english]);
 
   return (
@@ -95,14 +95,14 @@ const CurrentlyPreview = ({ currently, english }) => {
       >
         <div className={styles.previewHalfLeft}>
           <div className={styles.previewImage}>
-            {firstPost.txtbeitrag && firstPost.textbeitrag[0]?.images && (
+            {firstPost?.txtbeitrag && firstPost?.textbeitrag[0]?.images && (
               <Image
                 src={firstPost.textbeitrag[0]?.images[0]?.image.url}
                 fill
                 style={{ objectFit: "cover" }}
               />
             )}
-            {firstPost.bldbeitrag && firstPost.bldbeitrag[0]?.images && (
+            {firstPost?.bldbeitrag && firstPost?.bldbeitrag[0]?.images && (
               <Image
                 src={firstPost.bildbeitrag[0].images[0]?.image.url}
                 fill
@@ -123,13 +123,13 @@ const CurrentlyPreview = ({ currently, english }) => {
             <div className={styles.previewTextBottom}>
               <h2>
                 {english
-                  ? firstPost.header.titel.titleEN
-                  : firstPost.header.titel.titleDE}
+                  ? firstPost?.header.titel.titleEN
+                  : firstPost?.header.titel.titleDE}
               </h2>
               <p>
                 {english
-                  ? firstPost.header.subtitle?.subtitleEN
-                  : firstPost.header.subtitle?.subtitleDE}
+                  ? firstPost?.header.subtitle?.subtitleEN
+                  : firstPost?.header.subtitle?.subtitleDE}
               </p>
             </div>
           </div>
@@ -142,7 +142,7 @@ const CurrentlyPreview = ({ currently, english }) => {
           <div className={styles.previewQuarterTop}>
             <div className={styles.previewImage}>
               <Image
-                src={firstNews.newsbeitrag.images[0].image.url}
+                src={firstNews?.newsbeitrag.images[0].image.url}
                 fill
                 style={{ objectFit: "cover" }}
               />
@@ -159,8 +159,8 @@ const CurrentlyPreview = ({ currently, english }) => {
               <div className={styles.previewTextBottom}>
                 <h2>
                   {english
-                    ? firstNews.header.titel.titleEN
-                    : firstNews.header.titel.titleDE}
+                    ? firstNews?.header.titel.titleEN
+                    : firstNews?.header.titel.titleDE}
                 </h2>
               </div>
             </div>
@@ -170,14 +170,14 @@ const CurrentlyPreview = ({ currently, english }) => {
         <Link href={{ pathname: "/currently", query: { active: secondIndex } }}>
           <div className={styles.previewQuarter}>
             <div className={styles.previewImage}>
-              {secondPost.txtbeitrag && secondPost.textbeitrag[0].images && (
+              {secondPost?.txtbeitrag && secondPost?.textbeitrag[0].images && (
                 <Image
                   src={secondPost.textbeitrag[0].images[0].image.url}
                   fill
                   style={{ objectFit: "cover" }}
                 />
               )}
-              {secondPost.bldbeitrag && secondPost.bildbeitrag[0].images && (
+              {secondPost?.bldbeitrag && secondPost?.bildbeitrag[0].images && (
                 <Image
                   src={secondPost.bildbeitrag[0].images[0].image.url}
                   fill
@@ -197,8 +197,8 @@ const CurrentlyPreview = ({ currently, english }) => {
               <div className={styles.previewTextBottom}>
                 <h2>
                   {english
-                    ? secondPost.header.titel.titleEN
-                    : secondPost.header.titel.titleDE}
+                    ? secondPost?.header.titel.titleEN
+                    : secondPost?.header.titel.titleDE}
                 </h2>
               </div>
             </div>

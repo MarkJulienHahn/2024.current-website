@@ -16,9 +16,9 @@ const Impressum = ({ impr, english, impressum, background, setBackground }) => {
         ref={ref}
       >
         {english ? (
-          <PortableText value={impressum.impressumEN} />
+          <PortableText value={impressum?.impressumEN} />
         ) : (
-          <PortableText value={impressum.impressumDE} />
+          <PortableText value={impressum?.impressumDE} />
         )}
       </div>
     </div>

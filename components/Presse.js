@@ -15,7 +15,7 @@ const Presse = ({ english, presse, logos, impressum }) => {
             <div className={styles.infoSubHeadlineDownloads}>
               <h1>{english ? "Press" : "Presse"}</h1>
               <h2 className={styles.presseSubheadline}>
-                {english ? presse[0].headlineEnglish : presse[0].headlineGerman}
+                {english ? presse[0]?.headlineEnglish : presse[0]?.headlineGerman}
               </h2>
             </div>
           </div>
@@ -33,7 +33,7 @@ const Presse = ({ english, presse, logos, impressum }) => {
       ) : (
         ""
       )}
-      <Downloads english={english} downloads={presse[1].downloads} />
+      <Downloads english={english} downloads={presse[1]?.downloads} />
       <LogosPresse english={english} logos={logos} />
       <Footer english={english} impressum={impressum} />
     </div>

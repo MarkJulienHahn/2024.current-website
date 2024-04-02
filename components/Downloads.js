@@ -5,7 +5,7 @@ const Downloads = ({ english, downloads }) => {
 
   return (
     <div style={{ background: "var(--red)" }}>
-      {downloads.length != 0 ? (
+      {downloads?.length != 0 ? (
         <>
           <div className={"anchor"} id="downloads"></div>
           <div style={{ display: "flex" }}>
@@ -15,7 +15,7 @@ const Downloads = ({ english, downloads }) => {
           </div>
 
           <div className={styles.downloadContentPresse}>
-            {downloads.length
+            {downloads?.length
               ? downloads.map((entry, i) => (
                   <div key={i} className={styles.downloadItem}>
                     <h1>{english ? entry?.nameEN : entry?.nameDE}</h1>
