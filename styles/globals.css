@@ -44,9 +44,9 @@ a {
 
 :root {
   --green: #005800;
-  --red: #ff3d00;
+  --red: red;
   --pink: #ffa0ff;
-  --blue: #00beff;
+  --blue: blue;
   --grey: #f2f2f2;
   --space: 65px;
   --spaceLarge: 130px;
